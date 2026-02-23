@@ -46,6 +46,8 @@ class RPG_CPP_API ANPCController : public AAIController
     UPROPERTY()
     UDialogOptionsWidget* dialogBoxWidget;
 
+    FString characterName;
+
 public:
     void setCurrentPath(TArray<AWaypoint*>& path);
     void OnMoveCompleted(FAIRequestID RequestID, const FPathFollowingResult& Result) override;

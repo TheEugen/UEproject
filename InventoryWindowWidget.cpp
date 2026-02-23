@@ -98,6 +98,9 @@ void UInventoryWindowWidget::NativeConstruct()
 		} 
 	}
 
+	// set keyboard focus to inventory
+	SetKeyboardFocus();
+
 	// set keyboard focus to the first slot
-	inventorySlots[0]->SetKeyboardFocus();
+	//inventorySlots[0]->SetKeyboardFocus();
 }

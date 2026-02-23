@@ -52,9 +52,13 @@ void URPGGameInstance::spawnNPCs()
 	FRotator rot = FRotator(0.f);
 	FActorSpawnParameters spawnParameters = FActorSpawnParameters();
 	spawnParameters.bNoFail = true;
+	spawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod(1);
 
 	// get data tables of all npcs
 	TArray<npc_data_struct> npcList = npc_data_handler.getXmlHandler().getNPCData();
+
+	FVector loc;
+	AAICharacter* character;
 
 	bool pcSeen = false;
 	for(int i = 0; i < npcList.Num(); ++i)
@@ -65,12 +69,25 @@ void URPGGameInstance::spawnNPCs()
 			continue;
 		}
 
-		FVector loc = AWaypoint::findWaypointByName(waynet_handler.getWaynet(), npcList[i].spawnpoint_name)->GetActorLocation();
-		AAICharacter* character = (AAICharacter*) GetWorld()->SpawnActor(AAICharacter::StaticClass(), &loc, &rot, spawnParameters);
+
+		// get spawn point coordinates
+		loc = AWaypoint::findWaypointByName(waynet_handler.getWaynet(), npcList[i].spawnpoint_name)->GetActorLocation();
+
+		// spawn the actor
+		character = (AAICharacter*) GetWorld()->SpawnActor(AAICharacter::StaticClass(), &loc, &rot, spawnParameters);
+
+		// error checking
 		check(character);
+
+		// set character name
 		character->setName(npcList[i].name);
 		character->AIControllerClass = ANPCController::StaticClass();
+
 		character->SpawnDefaultController();
+
+		// reset variables
+		loc = FVector(0);
+		character = nullptr;
 	}
 }
 

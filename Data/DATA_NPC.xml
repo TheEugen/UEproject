@@ -29,8 +29,8 @@
     <dailyRoutines>
       <routine>
         <hour>8</hour>
-        <minute>5</minute>
-        <location>WP_FOREST_17</location>
+        <minute>0</minute>
+        <location>WP_FOREST_3</location>
         <activity>DR_STAND</activity>
       </routine>
       <routine>
@@ -42,7 +42,7 @@
       <routine>
         <hour>8</hour>
         <minute>25</minute>
-        <location>WP_FOREST_19</location>
+        <location>WP_FOREST_9</location>
         <activity>DR_STAND</activity>
       </routine>
     </dailyRoutines>
@@ -62,8 +62,8 @@
     <dailyRoutines>
       <routine>
         <hour>8</hour>
-        <minute>5</minute>
-        <location>WP_FOREST_16</location>
+        <minute>0</minute>
+        <location>WP_FOREST_4</location>
         <activity>DR_STAND</activity>
       </routine>
       <routine>
@@ -75,12 +75,12 @@
       <routine>
         <hour>8</hour>
         <minute>25</minute>
-        <location>WP_FOREST_18</location>
+        <location>WP_FOREST_10</location>
         <activity>DR_STAND</activity>
       </routine>
     </dailyRoutines>
   </npc-2-max>
-  <npc-4-joshka>
+  <npc-3-joshka>
     <attributes>
       <name>Joshka</name>
       <id>4</id>
@@ -91,18 +91,18 @@
       <currentMana>100</currentMana>
       <maxMana>100</maxMana>
     </attributes>
-    <spawnpoint>WP_FOREST_START_4</spawnpoint>
+    <spawnpoint>WP_FOREST_START_3</spawnpoint>
     <dailyRoutines>
       <routine>
         <hour>8</hour>
-        <minute>5</minute>
+        <minute>0</minute>
         <location>WP_FOREST_9</location>
         <activity>DR_STAND</activity>
       </routine>
       <routine>
         <hour>8</hour>
         <minute>15</minute>
-        <location>WP_FOREST_11</location>
+        <location>WP_FOREST_5</location>
         <activity>DR_STAND</activity>
       </routine>
       <routine>
@@ -112,5 +112,5 @@
         <activity>DR_STAND</activity>
       </routine>
     </dailyRoutines>
-  </npc-4-joshka>
+  </npc-3-joshka>
 </root>

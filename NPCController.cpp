@@ -158,16 +158,22 @@ void ANPCController::BeginPlay()
     Super::BeginPlay();
 
     game_instance = (URPGGameInstance*) UGameplayStatics::GetGameInstance(GetWorld());
-    game_instance->TimerManager->SetTimer(dailyRoutine_timerHandle, this, &ANPCController::updateDailyRoutine, 2.5f, true, 1.f);
+    game_instance->TimerManager->SetTimer(dailyRoutine_timerHandle, this, &ANPCController::updateDailyRoutine, 2.5f, true, 3);
 }
 
 UFUNCTION()
 void ANPCController::updateDailyRoutine()
 {
+
+
     // get daily routines for this npc
+    
     XMLHandler xml_handler = game_instance->getNpcDataHandler().getXmlHandler();
+    
     FString npc_name = ((AAICharacter*)GetCharacter())->getName();
     TArray<DailyRoutine> daily_routines = TArray<DailyRoutine>(xml_handler.getNPCDataByName(npc_name).dailyRoutines);
+    
+    //TArray<DailyRoutine> daily_routines = TArray<DailyRoutine>(xml_handler.getNPCDataByName(getCharacterName()).dailyRoutines);
 
     // is there a new routine?
     DailyRoutine routine;
