@@ -111,3 +111,12 @@ UEproject/
 - The XML path in `XMLHandler.cpp` is currently hardcoded to `C:\dev\Unreal Projects\RPG_cpp 5.0\...` and must be updated before the NPC data pipeline will work.
 - The quest system is scaffolded but not yet implemented.
 - This is a prototype / learning project and does not represent a complete or shippable game.
+
+## License
+
+Source-available under the [PolyForm Noncommercial License 1.0.0](LICENSE).
+You may use, modify and share this code for noncommercial purposes (personal use, hobby projects, research, education).
+**Commercial use requires a separate license.** Contact: fehandke@gmail.com
+
+Text and data mining for commercial purposes, including using this code to train AI models, is expressly reserved
+(§ 44b UrhG, Art. 4(3) Directive (EU) 2019/790).
